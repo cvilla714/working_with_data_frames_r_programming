@@ -34,8 +34,8 @@ View(penguins)
 #ggplot(data = penguins) + geom_smooth(mapping = aes(x = flipper_length_mm, y = body_mass_g))
 
 #combining geo_smooth and geo_points
-#ggplot(data = penguins) + geom_smooth(mapping = aes(x = flipper_length_mm, y = body_mass_g))+
- # geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g))
+ggplot(data = penguins) + geom_smooth(mapping = aes(x = flipper_length_mm, y = body_mass_g))+
+ geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g))
 
 #adding a linetype to represent different species
 ggplot(data = penguins) + geom_smooth(mapping = aes(x = flipper_length_mm, y = body_mass_g,linetype=species))

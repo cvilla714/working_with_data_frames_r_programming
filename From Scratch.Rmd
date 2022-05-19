@@ -1,0 +1,69 @@
+---
+title: "gglplot_hook"
+author: "Cosmel"
+date: '2022-05-19'
+output: html_document
+---
+
+## Setting up the evironment
+Notes: setting up my R environment by loading the 'tidyverse' and 'palmerpenguins' packages
+#i can load the code by pressing control + alt + i
+```{r loading pacakges}
+library(tidyverse)
+library(ggplot2)
+library(palmerpenguins)
+```
+### Assignin the data that we need
+Notes: Using the 'penguinas' data
+
+```{r}
+data("penguins")
+```
+
+### create the data visualization by using ggplot2
+Here just using ggplot2 
+
+```{r}
+ggplot(data = penguins) + geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g))
+```
+
+### Adding colors to the scatte plot
+Improving the scatter plot by adding color the species
+
+```{r}
+ggplot(data = penguins) + geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g,color=species))
+```
+
+### Improving by adding shape and color
+Adds shape and color to the scatter plot
+
+```{r}
+ggplot(data = penguins) + geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g,color=species,shape=species))
+```
+
+### Adding size 
+
+```{r}
+ggplot(data = penguins) + geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g,color=species,shape=species,size=species))
+```
+
+### using alpha for transparency
+
+```{r}
+ggplot(data = penguins) + geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g,alpha=species))
+```
+
+### assigning a particular color
+
+```{r}
+ggplot(data = penguins) + geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g,alpha=species),color="purple")
+```
+
+
+
+
+
+
+
+
+
